@@ -1,0 +1,26 @@
+<h1>Listado de Post</h1>
+ <%= link_to 'Nuevo Post', new_post_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+     <th>User</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td><%= post.user.email %></td>
+
+    <td><%= link_to 'Ver', post_path(post) %></td>
+    <% if post.user == current_user %>
+    <td><%= link_to 'Editar', edit_post_path(post) %></td>
+    <td><%= link_to 'Eliminar', post_path(post),
+                    method: :delete, data: { confirm: 'Estas Seguro?' } %></td>
+                    <% end %>
+    </tr>
+  <% end %>
+</table>
