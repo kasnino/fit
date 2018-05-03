@@ -20,6 +20,9 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'simple_form'
+gem 'haml'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
