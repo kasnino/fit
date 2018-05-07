@@ -24,6 +24,9 @@ gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'simple_form'
 gem 'haml'
 
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
