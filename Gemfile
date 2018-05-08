@@ -19,7 +19,7 @@ gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'font-awesome-sass', '~> 4.4.0'
 gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'simple_form'
 gem 'haml'
