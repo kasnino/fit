@@ -1,7 +1,18 @@
 <h1>Editar Perfil</h1>
-<%= form_for(@user) do |f| %>
+
+
+<%= form_for(@user, html: {multipart: true })do |f| %>
+
 <%= f.label :name%>
 <%= f.text_field :name%>
+
+
+ <div class="hero-avatar">
+            <label class="change-avatar" id="change-avatar" style="background-image: url('<%= @user.avatar.url %>')">
+              <%= f.file_field :avatar %>
+              <%= icon('camera') %>
+            </label>
+          </div>
 
 <%= f.submit "Guardar" %>
 <%end %>

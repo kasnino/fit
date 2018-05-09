@@ -23,6 +23,7 @@ gem 'font-awesome-sass', '~> 4.4.0'
 gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'simple_form'
 gem 'haml'
+gem 'carrierwave', '~> 1.0'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
