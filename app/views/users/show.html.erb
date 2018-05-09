@@ -1,6 +1,7 @@
-<h1>hola   <%= @user.name %></h1>
+<h1>Perfil de  <%= @user.name %></h1>
 
-<%= image_tag @user.avatar.url(:thumb) if @user.avatar?  %>
+
+<%= avatar_for(@user) %>
 
 <% if user_signed_in? %>
 <%= link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-left edit-button' %>
