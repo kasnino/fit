@@ -1,7 +1,21 @@
-<h1>Perfil de  <%= @user.name %></h1>
+
+<div class="banner-container" data-animation="fadeInUp-fadeOutDown-slow">
+  <div class="hero-wrapper">
+    <header class="hero">
+      <div class="profile-info">
+        <h1 class="hero-title"><%= @user.name %></h1>
+        <p class="hero-description"><%= @user.description %></p>
+        
+      </div>
+      <div class="hero-avatar">
+        <%= avatar_for @user, size: 100 %>
+      </div>
+    </header>
+</div>
+</div>
 
 
-<%= avatar_for(@user) %>
+
 
 <% if user_signed_in? %>
 <%= link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-left edit-button' %>
