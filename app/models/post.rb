@@ -9,4 +9,6 @@ class Post < ApplicationRecord
                      default_scope { order('created_at DESC') }
 
     mount_uploader :imagen, ImagenUploader
+   
+    
 end

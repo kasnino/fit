@@ -1,3 +1,6 @@
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 <%- model_class = Post -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
@@ -41,3 +44,4 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
             :class => 'btn btn-primary' %>
+</div></div>

@@ -1,4 +1,5 @@
-
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 
 <%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
 
@@ -18,7 +19,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :title, :class => 'control-label col-lg-2' %>
+    <%= f.label :title %>
     <div class="col-lg-10">
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
@@ -40,7 +41,7 @@
             </label>
           </div>
 
-  
+
   <div class="form-group">
     <%= f.label :user_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -58,3 +59,5 @@
   </div>
 
 <% end %>
+   </div>
+  </div>
