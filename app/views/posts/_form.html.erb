@@ -31,6 +31,16 @@
     </div>
     <%=f.error_span(:text) %>
   </div>
+ 
+ 
+<div class="hero-avatar">
+            <label class="change-avatar" id="change-avatar" style="background-image: url('<%= @post.imagen.url %>')">
+              <%= f.file_field :imagen %>
+              <%= icon('camera') %>
+            </label>
+          </div>
+
+  
   <div class="form-group">
     <%= f.label :user_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">

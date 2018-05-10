@@ -4,6 +4,21 @@
 </div>
 
 <dl class="dl-horizontal">
+
+ <div class="hero-wrapper">
+    <header class="hero">
+      <div class="profile-info">
+        <h1 class="hero-title"><%= @post.title %></h1>
+    
+        
+      </div>
+      <div class="hero-avatar">
+        <%= imagen_for @post, size: 300 %>
+      </div>
+    </header>
+</div>
+
+
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @post.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:text) %>:</strong></dt>

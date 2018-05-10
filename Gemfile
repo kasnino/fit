@@ -9,7 +9,6 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
-gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'mini_magick', '~> 4.8'
@@ -27,6 +26,8 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
+gem 'coffee-script', '~> 2.4'
+gem 'react-rails', '~> 2.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
