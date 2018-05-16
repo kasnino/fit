@@ -10,4 +10,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: attributes)
   end
 
+  
+    def current_user?(user)
+      current_user.id == user.id
+    end
+
+    helper_method :current_user?
+
 end

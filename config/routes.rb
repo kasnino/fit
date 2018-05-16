@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :posts
   get 'posts/new'
   post 'posts' => 'posts#create'
+  get 'tags/:tag', to: 'posts#index', as: "tag"
 
   resources :posts do
   resources :comments

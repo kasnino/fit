@@ -1,14 +1,16 @@
   <div class="navbar navbar-default navbar-static-top">
+      <%= link_to 'FITNess', root_path, class: 'navbar-brand' %>
     <div class="container">
 
-      <a class="navbar-brand" href="#">FITNESS</a>
+
+
       <div class="navbar-collapse collapse navbar-responsive-collapse">
 
        <ul class="nav navbar-nav navbar-right">
 
-        <li class="main-searchbar" id="main-searchbar">
+       <!--  <li class="main-searchbar" id="main-searchbar">
           <%= react_component('SearchContainer', {prerender: true},) %>
-        </li>
+        </li> -->
 
         <li class="new_blog_botton"><%= link_to 'Blog', posts_path, class: "button", data: { behavior: 'trigger-overlay' }  %></li>
 
