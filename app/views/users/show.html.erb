@@ -7,6 +7,10 @@
         <p class="hero-description"><%= @user.description %></p>
         
       </div>
+<% if user_signed_in? && !current_user?(@user) %>
+<button> Seguir</button>
+<% end %>
+      
       <div class="hero-avatar">
         <%= avatar_for @user, size: 100 %>
       </div>
@@ -20,3 +24,4 @@
 <% if user_signed_in? && current_user?(@user) %>
 <%= link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-left edit-button' %>
 <% end %>
+
