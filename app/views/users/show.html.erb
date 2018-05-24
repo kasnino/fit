@@ -7,10 +7,7 @@
         <p class="hero-description"><%= @user.description %></p>
         
       </div>
-<% if user_signed_in? && !current_user?(@user) %>
-<button> Seguir</button>
-<% end %>
-      
+
       <div class="hero-avatar">
         <%= avatar_for @user, size: 100 %>
       </div>
@@ -25,3 +22,21 @@
 <%= link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-left edit-button' %>
 <% end %>
 
+<% if user_signed_in? && !current_user?(@user) %>
+
+
+    <% if current_user.following?(@user) %>
+    <%= link_to "Dejar Seguir", relationships_path(user_id: @user.id), method: :delete, class: 'button green-border-button pull-left edit-button' %>
+
+<% else %>
+
+ <%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
+
+<% end %>
+<!-- <section>
+  <%= render :partial => 'follow_form' %> 
+</section>
+<section>
+  <%= render :partial => 'stats' %> 
+</section> -->
+<% end %>
