@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   devise_for :users
    root 'homes#show'
   
-  resources :users, only: [:show, :edit, :update]
-  resources :relationships, only: [:create, :destroy]
+  resources :users, only: [:show, :edit, :update] do
+     member do
+     	get :following, :followers
+     end
+   end
+    resources :relationships, only: [:create, :destroy]
   get 'relationships' => 'relationships#create'
   delete 'relationships' => 'relationships#destroy'
   resources :posts

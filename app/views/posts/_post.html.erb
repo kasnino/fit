@@ -1,23 +1,26 @@
-  <!-- 
-  <% if post.imagen? %>
-      <div class="post-picture-wrapper">
-        <%= image_tag post.imagen.url(:thumb) %>
 
-      </div>
-      <% end %> -->
+  <!-- AQUIIII EL LANDING PAGE
+-->
 
 
-
-      <div class="post_panel">
-        <%= avatar_for(post.user, size:40) %>
-        <%= link_to post.user.name, post.user %>
-        <div class="main-body">
-  <h3 class="post-title"><%= link_to post.title, post %></h>
-<!--     <h class="post-text"><%= post.text%></h1> -->
-        </div>
+  
+  <div class="post_panel">
 
 
-
-
-         <p><%=raw tag_links(post.all_tags)%> </p>
+   
+   <%= avatar_for(post.user, size:40) %>   
+    <%= link_to post.user.name, post.user %>
+   <br>
+      <div class="post_panel_imagen">
+        <br>
+        <%= imagen_for(post, size:350) %>
        </div>
+       <br>
+          <div class="main-body">
+            <h3 class="post-title"><%= link_to post.title, post %></h3>      
+              <br>
+          </div>
+
+         
+
+</div>   

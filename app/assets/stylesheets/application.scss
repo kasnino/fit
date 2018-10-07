@@ -17,7 +17,8 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+// Pages (page specific styles)
+@import 'pages/posts.show';
 // Modules
 @import 'modules/buttons';
 @import 'modules/avatar';

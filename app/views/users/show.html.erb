@@ -24,8 +24,7 @@
 
 <% if user_signed_in? && !current_user?(@user) %>
 
-
-    <% if current_user.following?(@user) %>
+ <% if current_user.following?(@user) %>
     <%= link_to "Dejar Seguir", relationships_path(user_id: @user.id), method: :delete, class: 'button green-border-button pull-left edit-button' %>
 
 <% else %>
@@ -33,10 +32,19 @@
  <%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
 
 <% end %>
-<!-- <section>
-  <%= render :partial => 'follow_form' %> 
-</section>
-<section>
-  <%= render :partial => 'stats' %> 
-</section> -->
+   <br> <br> 
+   
+<div class="stats">
+
+    <a href="<%= following_user_path(@user)%>">
+    <strong id="following" class="stats">
+    <%= @user.followings.count%>
+    </strong> Siguiendo </a> 
+
+    <a href="<%= followers_user_path(@user)%>">
+    <strong id="followers" class="stats">
+    <%= @user.followers.count%>
+    </strong> Seguidores</a> 
+
 <% end %>
+

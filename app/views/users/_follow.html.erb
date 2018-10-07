@@ -1,6 +1,2 @@
+<%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
 
-<%=form_for(current_user.active_relationships.build(followed_id: @user.id)) do |f| %>
-<div> <%=  f.hidden_field :followed_id %> </div>
-<%= f.submit "Follow", class: 'button green-border-button pull-left edit-button'%>
-
-<% end %>

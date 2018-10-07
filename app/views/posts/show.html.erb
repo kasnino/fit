@@ -1,43 +1,52 @@
-<%- model_class = Post -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
 
-<dl class="dl-horizontal">
 
- <div class="hero-wrapper">
-    <header class="hero">
-      <div class="profile-info">
-        <h1 class="hero-title"><%= @post.title %></h1>
-    
-        
+
+    <div class="pull-right">
+      <%= render partial: 'posts/social_share', locals: { post: @post } %>
+    </div>
+    <td>publicado el <%= @post.created_at %></td>
+
+    <dl class="dl-horizontal">
+
+      <div class="hero-wrapper">
+        <header class="hero">
+          <div class="profile-info">
+            
+
+            
+          </div>
+          <div class="hero-avatar">
+            <%= imagen_for @post, size: 1200 %>
+          </div>
+        </header>
       </div>
-      <div class="hero-avatar">
-        <%= imagen_for @post, size: 1200 %>
+
+      <h1 class="hero-title"><%= @post.title %></h1>
+
+
+
+      <%- model_class = Post -%>
+
+
+      <div class="post-show">
+
+        <p><%= @post.text %></p>
       </div>
-    </header>
-</div>
 
+      <p><%=raw tag_links(@post.all_tags)%> </p>
+    </dl>
 
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @post.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:text) %>:</strong></dt>
-  <dd><%= @post.text %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @post.user_id %></dd>
-</dl>
-     <td>publicado el <%= @post.created_at %></td>
-     <br>
-     <br>
+    <br>
+    <br>
 
-     <% if user_signed_in? %>
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              posts_path, :class => 'btn btn-default'  %>
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_post_path(@post), :class => 'btn btn-default' %>
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              post_path(@post),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
-<% end %>
+    <% if user_signed_in? %>
+    <%= link_to t('.back', :default => t("helpers.links.back")),
+    posts_path, :class => 'btn btn-default'  %>
+    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+    edit_post_path(@post), :class => 'btn btn-default' %>
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    post_path(@post),
+    :method => 'delete',
+    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    :class => 'btn btn-danger' %>
+    <% end %>

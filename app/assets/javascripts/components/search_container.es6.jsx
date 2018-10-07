@@ -4,6 +4,8 @@ class SearchContainer extends React.Component {
       <div>
         
        <SearchBar />
+       <SearchResultsList />
+      
       </div>
     );
   }

@@ -4,8 +4,8 @@ class SearchBar extends React.Component {
       <form action="/search" acceptCharset="UTF-8" method="get">
       <input name="utf8" type="hidden" value="√" />
       
-      <input class="search_qq" placeholder=" Buscar historias" autoComplte="off" type="search" name="search[q]" id="search_q" />
-    <button class="buttone" name="button" type="submit"><span className="glyphicon glyphicon-search"></span></button>
+      <input class="search_qq" placeholder=" Buscar Relatos" 
+      autoComplete="off" type="search" name="search[q]" id="search_q" />
       </form>
     );
   }
