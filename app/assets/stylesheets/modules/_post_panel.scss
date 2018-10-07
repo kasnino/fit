@@ -2,11 +2,13 @@
 .main-container{
   display: grid;
   grid-template-columns: repeat( 3, 1fr );
+  grid-gap: 2px;
+  justify-content: center;
   
 }
 .post_panel {
 	border: 5px solid #efefef;
-	border-radius: 5px;
+	border-radius: 15px;
 	padding: 10px;
 	margin-bottom: 1.6em;
 	max-width: 200px;
@@ -16,14 +18,5 @@
 }
 .post_panel_imagen {
 
-	max-width: 100%;
 	display: grid;
-}
-.container-fluid.main-container::before {
-   border: 5px solid #efefef;
-	border-radius: 0px;
-	padding: 0px;
-	margin-bottom: 1.6em;
-	max-width: 0px;
-	background: #f2f2f2;
 }
