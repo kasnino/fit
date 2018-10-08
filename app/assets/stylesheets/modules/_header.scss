@@ -23,7 +23,7 @@ margin-top: 10px;
 
 input#search_q.search_qq {
 	 border-radius: 50px;
-	 border: 1px solid #00ab6b;
+	 border: 1px solid #6f5499;
 }
 
 .main-searchbar{
@@ -39,3 +39,15 @@ margin-right: 8px;
 	    margin-right: 4px;
 		margin-left: 4px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
