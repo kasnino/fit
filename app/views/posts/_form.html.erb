@@ -17,30 +17,48 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :title %>
+  <div class="form-inputs">
+    <%= f.label :title, 'Titulo' %>
     <div class="col-lg-10">
-      <%= f.text_field :title, :class => 'form-control' %>
+      <%= f.text_field :title, :class => 'form-control form-control-lg', :placeholder => 'Titulo del blog' %>
     </div>
     <%=f.error_span(:title) %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :text, :class => 'control-label col-lg-2' %>
+<br>
+  <div class="form-inputs">
+    <%= f.label :text, 'Contenido'%>
     <div class="col-lg-10">
-      <%= f.text_field :text, :class => 'form-control' %>
+      <%= f.text_field :text, :class => 'form-control',:placeholder => 'Contenido'  %>
     </div>
     <%=f.error_span(:text) %>
   </div>
  
-   <div class="form-group">
-    <%= f.label :all_tags %>
+   <div class="form-inputs">
+    <%= f.label :all_tags, 'Categorias'%>
     <div class="col-lg-10">
-      <%= f.text_field :all_tags, :class => 'form-control' %>
+      <%= f.text_field :all_tags, :class => 'form-control', :placeholder => 'Categorias Separadas en comas (,)'  %>
     </div>
     <%=f.error_span(:title) %>
   </div>
+
+  <div class="form-inputs">
+  <label>Categorias</label>
+  <% @categories.each do |category|%>
  
+ <!--      <div class="field">
+        <%= check_box_tag "categories[]", category.id %>
+        <%=  category.name%>  
+      </div> -->
+
+<div class="field">
+    <%= check_box_tag "category_ids[]", category.id %> <%= category.name %>
+</div>
+
+  <%end%>
+  </div>
+
+
+ <br>
 <div class="hero-avatar">
             <label class="change-avatar" id="change-avatar" style="background-image: url('<%= @post.imagen.url %>')">
               <%= f.file_field :imagen %>
@@ -49,15 +67,15 @@
           </div>
 
 
-  <div class="form-group">
+ <!--  <div class="form-group">
     <%= f.label :user_id, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :user_id, :class => 'form-control' %>
     </div>
     <%=f.error_span(:user_id) %>
   </div>
-
-  <div class="form-group">
+ -->
+  <div class="form-actions">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

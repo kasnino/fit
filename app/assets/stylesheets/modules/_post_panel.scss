@@ -75,3 +75,29 @@
   font-size: 12px;
   border-top: 1px solid #eaeaea;
 }
+
+.container-new{
+  margin: 50px;
+  justify-content: center;
+  max-width: 100%;
+  border-radius: 15px;
+    border: 5px solid #efefef;
+
+}
+
+.form-group{
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.uk-h2.uk-margin-top-remove {  
+    background: #f3f5f9;
+    text-align: center;
+    color: #313449!important;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: open sans condensed,sans-serif;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin-bottom: 0;
+  }

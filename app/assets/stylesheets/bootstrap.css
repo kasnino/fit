@@ -3687,8 +3687,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
-    padding-right: 0;
-    padding-left: 0;
+    z-index: 6;
+    -webkit-box-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    position: fixed;
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #fff;
+    
   }
 }
 .container > .navbar-header,

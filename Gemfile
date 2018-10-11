@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem 'coffee-script', '~> 2.4'
 gem 'react-rails', '~> 2.4'
 
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
