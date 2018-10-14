@@ -34,10 +34,23 @@
       </div>
 
       <p><%=raw tag_links(@post.all_tags)%> </p>
+
+<!-- <div class="field">
+      <% @categories.each do |category|%>
+      <%=link_to category.name, category %>
+      <%end%>
+</div> -->
     </dl>
 
     <br>
     <br>
+
+
+ <h2><%= @post.comments.count %> Comentarios</h2>
+<%= render @post.comments %>
+<h3>Agregar Commentarios</h3>
+<%= render "comments/form"%>
+
 
     <% if user_signed_in? %>
     <%= link_to t('.back', :default => t("helpers.links.back")),

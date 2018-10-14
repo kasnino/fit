@@ -62,6 +62,7 @@ private
 
 def category_params
     params.require(:category_ids)
+
 end
 
 end

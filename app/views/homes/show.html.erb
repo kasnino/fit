@@ -1,17 +1,25 @@
 
 <br>
-<br>
-<hr class="uk-grid-divider">
 
+
+
+<hr class="uk-grid-divider">
 <h3 class="uk-h2 uk-margin-top-remove">Categorías</h3>
 
+
+   <div id="tags" class="transitions-enabled clearfix masonry "> 
+
 	<% @categories.each do |category|%>
-   <li class="col-md">
-      
+  
+  
+    <div class="main-container2">
       <%= link_to category.name, category%>
-   		
-   </li>
+   	</div>	
+
 	<%end%>
+
+  	</div>
+
 
 <hr class="uk-grid-divider">
 <h3 class="uk-h2 uk-margin-top-remove">Relatos Recientes</h3>
