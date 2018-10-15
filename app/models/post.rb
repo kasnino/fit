@@ -15,7 +15,10 @@ class Post < ApplicationRecord
 	 has_many :taggings, dependent: :destroy
 	 has_many :tags, through: :taggings
 	 has_many :categories
-
+	 has_many :has_categories
+	 has_many :categories, through: :has_categories
+cattr_reader :per_page
+    @@per_page = 10
 
 
 	 def categories=(categories) 
@@ -41,6 +44,7 @@ class Post < ApplicationRecord
 	 def all_tags
 	 	tags.map(&:name).join(", ")
 	 end
+
 
 
 	 private

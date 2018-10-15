@@ -29,7 +29,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'coffee-script', '~> 2.4'
 gem 'react-rails', '~> 2.4'
-
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -33,9 +33,14 @@
         </td>
       </tr>
     <% end %>
+
+
   </tbody>
 </table>
-
+  <%= will_paginate @posts %>  
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-lg btn-block btn-primary' %>
+
+            <br>
+ 
