@@ -9,14 +9,14 @@
  
    <div id="tags" class="transitions-enabled clearfix masonry "> 
 
-    <div class="main-container2">
-    <ul class="list-group">
-   
+    <div class="main-container">
+    <ul class="post_panel list-group">
+
 	<% @categories.each do |category|%>
      <li class="list-group-item"> 
-     <%= link_to category.name, category_path(category)%></li></ul>
+     <%= link_to category.name, category_path(category)%></li>
      
-	<%end%>   
+	<%end%>   </ul>
 	</div>
   	</div>
 
