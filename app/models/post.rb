@@ -17,11 +17,10 @@ class Post < ApplicationRecord
 	 has_many :categories
 	 has_many :has_categories
 	 has_many :categories, through: :has_categories
-cattr_reader :per_page
-    @@per_page = 10
 
 
-	 def categories=(categories) 
+
+	 def categories=(name) 
 	 	@categories = categories
 
 	 end

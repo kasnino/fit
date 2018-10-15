@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
 
-<p>
-  <strong>Name:</strong>
+
+<tbody>
+
+  <strong>Categoria:</strong>
   <%= @category.name %>
 
-</p>
-</p>
-<p>
-aqui el nombre del post: No esta 
+
+
 
 
 	  <% @category.posts.each do |post| %>
        <h1><%= link_to post.title, post %></h1>
        <%end%>
 
-</p>
-<p>
+
   <strong>Color:</strong>
   <%= @category.color %>
-</p>
 
+</tbody>
+
+<tr>
+</thead>
+</table>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
