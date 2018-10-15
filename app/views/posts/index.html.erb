@@ -37,7 +37,7 @@
 
   </tbody>
 </table>
-  <%= will_paginate @posts %>  
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>  
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
             :class => 'btn btn-lg btn-block btn-primary' %>

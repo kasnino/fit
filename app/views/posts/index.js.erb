@@ -1,4 +1,5 @@
-$('#posts').apṕend('<%= j render(@posts) %>');
+$('#posts').append('<%= j render("post_page_header") %>');
+$('#posts').append('<%= j render(@posts) %>');
 <% if @posts.netx_page %>
   $('.pagination').replaceWith('<%= j will_paginate(@posts) %>');
 <% else %>
