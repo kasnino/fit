@@ -52,16 +52,14 @@
         </div>
 
       </div>    
-
+ <% if user_signed_in? %>
+  <%= link_to 'Elimimnar comment', [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+                 <% end %>
    </li>
 
   </ul>    
  </div>
- </body><p>
-  
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+ </body>

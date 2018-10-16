@@ -30,7 +30,7 @@ def index
     @posts = Post.tagged_with(params[:tag])
   else  
     @posts = Post.all
-    @posts = Post.order('created_at DESC').paginate(page: params[:page],per_page:9)
+    @posts = Post.order('created_at DESC').paginate(page: params[:page],per_page:5)
   end
     #@posts = Post.order(name: :asc).paginate(page: params[:page],per_page:10)
  
