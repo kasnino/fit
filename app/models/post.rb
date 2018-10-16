@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 	belongs_to :user
 	 #tiene mucho de
      after_create :save_categories
-     attr_reader :categories
+  
 	 has_many :comments, dependent: :destroy
 	 validates :title, presence: true,
 	 length: { minimum: 5 }
@@ -14,14 +14,14 @@ class Post < ApplicationRecord
 
 	 has_many :taggings, dependent: :destroy
 	 has_many :tags, through: :taggings
-	 has_many :categories
+
 	 has_many :has_categories
 	 has_many :categories, through: :has_categories
 
 
 
-	 def categories=(name) 
-	 	@categories = categories
+	 def categories=(value) 
+	 	@categories = value
 
 	 end
 

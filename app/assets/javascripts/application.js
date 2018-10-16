@@ -21,3 +21,4 @@
 //= require components
 //= require masonry/jquery.masonry
 //= require_tree .
+//= require trix

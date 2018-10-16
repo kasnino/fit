@@ -27,9 +27,8 @@
 <br>
   <div class="form-inputs">
     <%= f.label :text, 'Contenido'%>
-    <div class="col-lg-10">
-      <%= f.text_field :text, :class => 'form-control',:placeholder => 'Contenido'  %>
-    </div>
+   <%= f.hidden_field :text, id: :post_body, class: "form-control" %>
+    <trix-editor input="post_body"></trix-editor>
     <%=f.error_span(:text) %>
   </div>
  

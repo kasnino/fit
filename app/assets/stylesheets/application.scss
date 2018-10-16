@@ -12,10 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require trix
  */
 //= require 'masonry/transitions'
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "trix";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 // Pages (page specific styles)

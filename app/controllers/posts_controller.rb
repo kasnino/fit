@@ -11,6 +11,7 @@ def create
 
   @post = current_user.posts.build(post_params)
   @post.categories = category_params
+  
   # @post.categories = post_params[:categories]
     if @post.save
 	    redirect_to @post

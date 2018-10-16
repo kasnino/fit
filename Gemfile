@@ -31,6 +31,7 @@ gem 'coffee-script', '~> 2.4'
 gem 'react-rails', '~> 2.4'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'trix', '~> 0.9.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -30,7 +30,7 @@
 
       <div class="post-show">
 
-        <p><%= @post.text %></p>
+        <p><%=raw @post.text %></p>
       </div>
 
       <p><%=raw tag_links(@post.all_tags)%> </p>
