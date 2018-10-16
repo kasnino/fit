@@ -1,12 +1,64 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+<body class="body-comment">
+
+<div class="comments-container">
+
+<ul id="comments-list" class="comments-list">
+  <li>
+      <div class="comment-main-level">
+
+        <div class="comment-avatar">
+          
+        <br>
+        <%= avatar_for(@post.user, size:40) %>  
+  
+
+            <div class="comments-box">
+                  <div class="comments-head">
+
+                      <h6 class="comments-name by-author">
+                        <a href="http://localhost:3000/users/1">Kasnino</a>
+                      </h6>
+
+                      <span>hace 20 min</span>
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-reply"></i>
+                      <i class="far fa-comment"></i>
+                      <i class="far fa-eye"></i>
+                  </div>
+
+             
+                    
+                        
+               
+
+                  <div class="comments-content">
+	             
+	              	<%= comment.commenter %>
+	             
+
+
+	             
+	              	<%= comment.body %>
+	          
+
+
+                  </div>
+
+                     
+
+                   
+              </div>
+
+        </div>
+
+      </div>    
+
+   </li>
+
+  </ul>    
+ </div>
+ </body><p>
+  
 
 <p>
   <%= link_to 'Destroy Comment', [comment.post, comment],

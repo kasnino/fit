@@ -1,22 +1,64 @@
 <%= form_for([@post,@post.comments.build]) do |f| %>
+<body class="body-comment">
 
+<div class="comments-container">
 
-<p>
+<ul id="comments-list" class="comments-list">
+  <li>
+      <div class="comment-main-level">
+
+        <div class="comment-avatar">
+          
+        <br>
+        <%= avatar_for(@post.user, size:40) %>  
   
-  <%= f.label :commenter  %>
-</p>
+
+            <div class="comments-box">
+                  <div class="comments-head">
+
+                      <h6 class="comments-name by-author">
+                        <a href="http://localhost:3000/users/1">Kasnino</a>
+                      </h6>
+
+                      <span>hace 20 min</span>
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-reply"></i>
+                      <i class="far fa-comment"></i>
+                      <i class="far fa-eye"></i>
+                  </div>
+
+             
+                    
+                        <%= f.label :comentario  %>
+               
+
+                  <div class="comments-content">
+                       <p>
+                        
+                         <%= f.label :body  %><br>
+                         <%= f.text_area :body  %>
+                      </p>
 
 
-<p>
-  
-  <%= f.label :body  %><br>
-   <%= f.text_area :body  %>
-</p>
+                  </div>
 
-<p>
-  
-  <%= f.submit  %>
-</p>
+                     
 
- 
+                      
+                      <p>
+                        
+                        <%= f.submit  %>
+                      </p>
+
+              </div>
+
+        </div>
+
+      </div>    
+
+   </li>
+
+  </ul>    
+ </div>
+ </body>
 <% end %>
