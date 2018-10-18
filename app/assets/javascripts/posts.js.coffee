@@ -4,6 +4,11 @@ $ ->
       itemSelector: '.pin'
       isFitWidth: true
 $ ->
+  $('#masonry-container').imagesLoaded ->
+    $('#masonry-container').masonry
+      itemSelector: '.box'
+      isFitWidth: true
+$ ->
   if $('.pagination').length && $('#posts').length
     $(window).scroll ->
       url = $('.pagination .next_page').attr('href')

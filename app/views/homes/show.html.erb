@@ -4,20 +4,16 @@
 <h3 class="uk-h2 uk-margin-top-remove">Categorías</h3>
 
  <br>
-   <div id="tags" class="transitions-enabled clearfix masonry "> 
-
-    <div class="main-container">
-    <ul class="post_panel list-group">
-
-	<% @categories.each do |category|%>
-     <li class="list-group-item"> 
-     <%= link_to category.name, category_path(category)%></li>
-     
-	<%end%></ul>
-	</div>
-  	</div>
 
 
+
+		
+		   <%= render :partial => 'homes/category' %> 
+
+
+ 
+
+ 
 <hr class="uk-grid-divider">
 <h3 class="uk-h2 uk-margin-top-remove">Relatos Recientes</h3>
 <div id="pins" class="transitions-enabled clearfix masonry ">
