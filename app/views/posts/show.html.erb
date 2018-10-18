@@ -1,10 +1,10 @@
 
 
 
-    <div class="pull-right">
+  <!--   <div class="pull-right">
       <%= render partial: 'posts/social_share', locals: { post: @post } %>
-    </div>
-    <td>publicado el <%= @post.created_at %></td>
+    </div> -->
+    <td>publicado el <%=  @post.created_at.strftime("%Y-%m-%d") %></td>
 
     <dl class="dl-horizontal">
 
@@ -33,11 +33,12 @@
         <p><%=raw @post.text %></p>
       </div>
 
-      <div class="heart">
+      <div class="heart" style="float: right;">
             <i class="far fa-heart fa-3x fa-lg" style="color:#BE81F7;"></i>
             <i class="far fa-comment fa-3x fa-lg" style="color:#BE81F7;"> 
                       <%= @post.comments.count %>
                       </i>
+       </div>               
       <p><%=raw tag_links(@post.all_tags)%> </p>
 
 <!-- <div class="field">
@@ -49,11 +50,17 @@
 
     <br>
     <br>
+<hr class="uk-grid-divider">
+<h3 class="uk-h2 uk-margin-top-remove"></h3>
 
-
-     <h2><%= @post.comments.count %> Aqui Comentarios</h2>
+    <!--  <h2><%= @post.comments.count %> Aqui Comentarios</h2> -->
     <%= render @post.comments %>
-     <h3>Agregar Commentarios</h3>
+   <br>
+<hr class="uk-grid-divider">
+<h3 class="uk-h2 uk-margin-top-remove">
+  
+    Agregar Commentarios
+</h3>
     <%= render "comments/form"%>
 
 
