@@ -1,3 +1,5 @@
+
+<%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
 <body class="body-comment">
 
 	<div class="comments-container">
@@ -9,31 +11,33 @@
 
 	        <div class="comment-avatar">
 	          
+
+
+
 	        <br>
-	        <%= avatar_for(@post.user, size:40) %>  
-	  		     <%= link_to @post.user.name, @post.user %>
+	             <%= avatar_for(@post.user, size:40) %>
+
 	  		     <small style="float: right;"> publicado <%= @post.created_at.strftime("%Y-%m-%d")  %></small>
                 
 	            <div class="comments-box">
-	                  <div class="comments-head">
-
-
-	                     
-	                  </div>
+	                 
 
 	                  <div class="comments-content">
 
 				              <div class="text_area">
+<% @comments.each do |comment|%>
 
-				              <%= comment.commenter %>
-				              <%= comment.body %>
+
+ <% end %>
+				            <%= comment.commenter %>
+<%= comment.body %>  
 
 				              </div>
 				     <div class="iconos" style="float: right;">  
 		              	<i class="far fa-heart" style="color:#BE81F7;"></i>
 				        <i class="fas fa-reply" style="color:#BE81F7;"></i>
 				        <i class="far fa-eye" style="color:#BE81F7;"></i>
-                 </div>
+                     </div>
 	                  </div>
 	            
 	              </div>
@@ -52,3 +56,5 @@
 	 </div>
 
  </body>
+
+ <% end %>

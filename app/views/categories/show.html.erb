@@ -8,10 +8,6 @@ donde
   <strong>Categoria:</strong>
   <%= @category.name %>
 
-
-
-
-
 	  <% @category.posts.each do |post| %>
        <h1><%= link_to post.title, post %></h1>
        <%end%>

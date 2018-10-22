@@ -5,23 +5,19 @@
       <%= render partial: 'posts/social_share', locals: { post: @post } %>
     </div> -->
     <td>publicado el <%=  @post.created_at.strftime("%Y-%m-%d") %></td>
-
+ <h1 class="hero-title"><%= @post.title %></h1>
     <dl class="dl-horizontal">
 
       <div class="hero-wrapper">
         <header class="hero">
-          <div class="profile-info">
-            
-
-            
-          </div>
+         
           <div class="hero-avatar">
             <%= imagen_for @post, size: 1200 %>
           </div>
         </header>
       </div>
 
-      <h1 class="hero-title"><%= @post.title %></h1>
+     
 
 
 
@@ -29,16 +25,23 @@
 
 
       <div class="post-show">
+<br>
 
-        <p><%=raw @post.text %></p>
-      </div>
-
+<div class="perfil-avatar">
+   <%= avatar_for(@post.user, size:40) %>   
+  
+   <br>
       <div class="heart" style="float: right;">
-            <i class="far fa-heart fa-3x fa-lg" style="color:#BE81F7;"></i>
-            <i class="far fa-comment fa-3x fa-lg" style="color:#BE81F7;"> 
+            <i class="far fa-heart " style="color:#BE81F7;"></i>
+            <i class="far fa-comment" style="color:#BE81F7;"> 
                       <%= @post.comments.count %>
                       </i>
-       </div>               
+       </div> 
+
+</div><hr class="uk-grid-divider">
+        <p><%=raw @post.text %></p>
+      </div>
+              
       <p><%=raw tag_links(@post.all_tags)%> </p>
 
 <!-- <div class="field">
@@ -54,17 +57,19 @@
 <h3 class="uk-h2 uk-margin-top-remove"></h3>
 
     <!--  <h2><%= @post.comments.count %> Aqui Comentarios</h2> -->
+    
+
+    
     <%= render @post.comments %>
    <br>
 <hr class="uk-grid-divider">
 <h3 class="uk-h2 uk-margin-top-remove">
   
     Agregar Commentarios
-</h3>
+   </h3>
     <%= render "comments/form"%>
 
-
-    <% if user_signed_in? %>
+<% if user_signed_in? %>
     <%= link_to t('.back', :default => t("helpers.links.back")),
     posts_path, :class => 'btn btn-default'  %>
 

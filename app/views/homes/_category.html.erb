@@ -2,28 +2,18 @@
 
 
 
+	
 
-		
+	<div id="masonry-container" class="transitions-enabled clearfix masonry ">
 
-<div id="masonry-container" class="transitions-enabled clearfix masonry ">
-   
-	  <div class="box col3">
-				   
-          <% @categories.each do |category|%>
-		     <button class="btn1">
-		     <%= link_to category.name, category_path(category)%>
-		   
-		     </button>
-	    
-		
-	   </div>  
+	<div class="box col3">
+		<% @categories.each do |category|%>
 
+		<button class="btn1">
 
+			<%= link_to category.name, category_path(category)%>
 
+		</button></div>
+	</div>	 
 
-
-</div>
-
-
-
-  <%end%>	
+  <%end%>	 

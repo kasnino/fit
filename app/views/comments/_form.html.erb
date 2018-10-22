@@ -1,3 +1,5 @@
+
+
 <%= form_for([@post,@post.comments.build]) do |f| %>
 <body class="body-comment">
 
@@ -9,40 +11,28 @@
 
         <div class="comment-avatar">
           
-     
-        <%= avatar_for(@post.user, size:40) %>  
-      <%= link_to @post.user.name, @post.user %>
+        
+             
+       <%= avatar_for(@post.user, size:40) %>
+       
+       
+          
         </div>
- <span class="tip tip-up"></span> <br>
+ 
             <div class="comments-box">
                 <label id="placeholder" aria-hidden="true" slot="label" class="style-scope ytd-commentbox">
-            Agrega un comentario público…
-          </label>
+                 grega un comentario público…
+                </label>
                     
-                       <!--  <%= f.label :comentario  %> -->
-               
+                  
+                <div class="comments-content"><br>
+                <%= f.text_area :body, :rows => 5, :cols => 80, :class => 'form-control'%>
+                </div>
 
-                  <div class="comments-content">
-                     <br>
-                        <!-- 
-                         <%= f.label :body  %><br> -->
-                         <%= f.text_area :body, :rows => 5, :cols => 80, :class => 'form-control'  %>
-                     
-
-
-                  </div>
-
-                     
-
-                      
-                      <p>
-                        
-                        <%= f.submit :Publicar, :class => 'btn btn-primary'  %>
-                      </p>
-
-              </div>
-
-        
+                <%= f.submit :Publicar, :class => 'btn btn-primary'  %>
+                  
+<% end %>
+            </div>  
       </div>    
 
    </li>
@@ -50,4 +40,4 @@
   </ul>    
  </div>
  </body>
-<% end %>
+

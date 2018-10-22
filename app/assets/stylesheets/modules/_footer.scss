@@ -1,0 +1,31 @@
+*{
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  font-family:arial;
+}
+
+
+.footer{background:#0A95AA; color:#fff; height:100px}
+.copy{
+  font-size:10px;
+  text-align:center
+}
+.bottom-nav{
+  text-align:center;
+  background:#02BDD6;
+  width:100%;
+  color:#fff;
+  height:35px
+}
+.bottom-nav .nav{float:none; margin:0}
+.bottom-nav .nav a{ padding: 0 25px; line-height:35px}
+.fixed-top, .fixed-bottom{
+  background:#02BDD6;
+  position:fixed;
+  top:0;
+}
+.fixed-bottom{
+	top:auto;
+  bottom:0;
+}

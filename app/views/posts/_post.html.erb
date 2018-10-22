@@ -1,25 +1,26 @@
 
   <!-- AQUIIII EL LANDING PAGE
 -->
+<div class="cajapost">
 
 <div class="pin post_panel level-2" >
    <%= avatar_for(post.user, size:40) %>   
     <%= link_to post.user.name, post.user %>
    <br>
-      <div class="post_panel_imagen level-3">
+      <div class="post_panel_imagen level-3 img-fluid">
         <br>
-        <%= imagen_for(post, size:350) %>
+        <%= imagen_for(post, size:1200) %>
        </div>
        <br>
           <div class="main-body level-4">
             <h3 class="post-title">
-            <%= link_to post.title, post %>
+            <%= link_to post.title, post %>   </h3> 
            <span class="text-nuted pull-right">
 
               <small><%= link_to  post.all_tags %></small>
               
             </span><br>
-            </h3> 
+         
             </div>
             <span class="text-nuted pull-right">
               <small >
@@ -27,6 +28,7 @@
                       <i class="far fa-heart" style="color:#BE81F7;"></i>
                       <i class="far fa-comment" style="color:#BE81F7;"> 
                       <%= post.comments.count %>
+                    
                       </i>
                       <i class="far fa-eye" style="color:#BE81F7;"></i>
               </small>
@@ -39,4 +41,4 @@
 </div>      
 
 
- 
+ </div>

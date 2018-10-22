@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
      @category = Category.find(params[:id])
+     #@posts = Post.where(category_id params[:id].order(id: :desc))
   end
 
   # GET /categories/new

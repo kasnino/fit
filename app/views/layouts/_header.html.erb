@@ -1,16 +1,22 @@
-  <div class="navbar navbar-default navbar-static-top">
-      <%= link_to 'FITNess', root_path, class: 'navbar-brand' %>
+  <div class="navbar  navbar-static-top">
+      
     <div class="container_header">
 
 
 
       <div class="navbar-collapse collapse navbar-responsive-collapse">
 
-       <ul class="nav navbar-nav navbar-right">
+         
+
  
-         <li class="main-searchbar" id="main-searchbar">
+
+       <ul class="nav navbar-nav navbar-center">
+ 
+   <li class="new_blog_botton", style="float: left;"><%= link_to 'Relatos Morados', root_path, class: "button " , data: { behavior: 'trigger-overlay' }  %></li>
+
+      <!--    <li class="main-searchbar" id="main-searchbar">
           <%= react_component('SearchBar', { prerender: true})%>
-        </li> 
+        </li>  -->
 
         <li class="new_blog_botton"><%= link_to 'Blog', posts_path, class: "button", data: { behavior: 'trigger-overlay' }  %></li>
 

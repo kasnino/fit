@@ -22,7 +22,7 @@ def create
 
 def show
   @post = Post.find(params[:id])
-
+    @comments = Comment.where(post_id:@post).order("created_at DESC")
 end
 
 def index
@@ -64,7 +64,7 @@ private
   end
 
 def category_params
-    params.require(:category_ids)
+    params.permit(:category_ids)
 
 end
 
