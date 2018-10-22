@@ -6,17 +6,24 @@
  	box-sizing: border-box;
  }
  .main-container-padre{
-
+float:none;
+    text-align:center;
   display: grid;
   grid-template-columns: repeat(auto-fill, auto);
   grid-gap: 20px;
-  justify-content: center;
-
-    margin: 0 auto;
+   height: 50px;
     padding: 20px;
   
 
  }
+
+
+.box {
+  margin-bottom: 10px;
+
+    margin: 0 auto;
+}
+
 
  .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
@@ -27,7 +34,8 @@
 
 .btn1 {
      
-
+float:none;
+    text-align:center;
 /*    padding: 20px;
     font-size: 1.2em;
      border-radius: 5px;
@@ -47,6 +55,7 @@
     margin-bottom: 5px;
     padding: 10px;
      cursor: pointer;
+     text-transform: capitalize;
   }
 .btn1 {
 
@@ -55,7 +64,7 @@ color: #fff;
 border: 3px solid transparent;
 transition-property: background-color, color, border;
 transition-duration: 0.4s;
-
+ 
 }
 
 .btn1:hover{
