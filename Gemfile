@@ -32,7 +32,7 @@ gem 'react-rails', '~> 2.4'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'trix', '~> 0.9.0'
-
+gem 'activeadmin'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -51,4 +51,8 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do 
+  gem 'pg' 
+  gem 'rails_12factor'
+end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
