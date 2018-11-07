@@ -3,6 +3,12 @@ $ ->
     $('#pins').masonry
       itemSelector: '.pin'
       isFitWidth: true
+
+grid = document.querySelector('.grid')
+msnry = new Masonry(grid,
+  itemSelector: '.grid-item'
+  columnWidth: 100)
+
 $ ->
   $('#masonry-container').imagesLoaded ->
     $('#masonry-container').masonry
