@@ -19,16 +19,18 @@
 
   <div class="form-inputs">
     <%= f.label :title, 'Titulo' %>
-    <div class="col-lg-10">
-      <%= f.text_field :title, :class => 'form-control form-control-lg', :placeholder => 'Titulo del blog' %>
+    <div class="titulo">
+    
+  <%= f.text_field :title,  :size=>'50', :height=>'254', :class => 'form-control form-control-lg', :placeholder => 'Titulo del blog' %>
     </div>
     <%=f.error_span(:title) %>
   </div>
 <br>
-  <div class="form-inputs">
+  <div class="contenido form-inputs">
     <%= f.label :text, 'Contenido'%>
    <%= f.hidden_field :text, id: :post_body, class: "form-control" %>
-    <trix-editor input="post_body"></trix-editor>
+   
+    <trix-editor  input="post_body"></trix-editor>
     <%=f.error_span(:text) %>
   </div>
  
