@@ -20,5 +20,6 @@
 //= require react_ujs
 //= require components
 //= require masonry/jquery.masonry
-//= require_tree .
 //= require trix
+//= require_tree .
+

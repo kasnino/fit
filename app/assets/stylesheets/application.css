@@ -4,5 +4,6 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require 'masonry/infinitescroll'
  *= require_self
+ *= require trix
  *= require_tree .
 */
