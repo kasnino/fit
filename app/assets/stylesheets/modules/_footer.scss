@@ -6,10 +6,20 @@
 }
 
 
-.footer{background:#0A95AA; color:#fff; height:100px}
+.footer{
+ /* background:#0A95AA;*/ 
+ background: #101010;
+  color:#fff; 
+  height:100px;  
+  margin-top: 15px;
+  padding: 25px;
+  text-align: center;
+
+}
 .copy{
   font-size:10px;
-  text-align:center
+  text-align: center;
+    
 }
 .bottom-nav{
   text-align:center;

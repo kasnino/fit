@@ -33,15 +33,15 @@
     <trix-editor  input="post_body"></trix-editor>
     <%=f.error_span(:text) %>
   </div>
- 
+ <br>
    <div class="form-inputs">
     <%= f.label :all_tags, 'Categorias'%>
-    <div class="col-lg-10">
+    <div class="col-lg-10"><br>
       <%= f.text_field :all_tags, :class => 'form-control', :placeholder => 'Categorias Separadas en comas (,)'  %>
     </div>
     <%=f.error_span(:title) %>
   </div>
-
+<br>
   <div class="post_panel level-2">
     <label>Categorias</label>
     <% @categories.each do |category|%>
