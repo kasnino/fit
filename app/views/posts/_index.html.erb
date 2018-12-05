@@ -1,25 +1,36 @@
 
 <%- model_class = Post -%>
 <div class="page-header">
-  <h1>Post Publicados</h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-     
-      <th><%= model_class.human_attribute_name(:titulo) %></th>
-      <th><%= model_class.human_attribute_name(:publicado) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
+  <a><h1 class="text-indigo">Relatos Recientes</h1>
+</a></div>
+
+  
+ <table>
+<ul>
+
+        <tr>
+        <th><%= model_class.human_attribute_name(:titulo) %>  </th>
+          <th><%= model_class.human_attribute_name(:publicado)%>  </th>
+          
+              
+          <% if user_signed_in? %>  
+
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+          <th><%= model_class.human_attribute_name(:Categorias)%>  </th>
+            <% end %>
+        </tr><br>
+
+ 
   <tbody>
     <% @posts.each do |post| %>
       <tr>
         
-        <td class="post_panel"><%= link_to post.title, post %></td>
-        <td class="post_panel">publicado el <%= post.created_at %></td>
+        <td class="post_panel2"><%= link_to post.title, post %></td>
+        <td class="post_panel2">publicado el <%= post.created_at %></td>
+     
         <td>
-          <% if user_signed_in? %>
+        
+         <% if user_signed_in? && current_user?(post.user) %>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       post_path(post), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -31,16 +42,24 @@
                       :class => 'btn btn-xs btn-danger' %>
                           <% end %>
         </td>
-      </tr>
+      </tr><br>
     <% end %>
 
 
   </tbody>
-</table>
-  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>  
+
+ </table> 
+</ul>
+
+
+
+<div class="centrar">
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>  
+
+ <% if user_signed_in? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
-            :class => 'btn btn-lg btn-block btn-primary' %>
-
+            :class => 'btn btn-lg btn-primary' %>
+  <% end %>
             <br>
- 
+ </div>

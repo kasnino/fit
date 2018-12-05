@@ -1,4 +1,7 @@
 
+ 
+
+
 <%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
 <body class="body-comment">
 
@@ -15,10 +18,14 @@
 
 
 	        <br>
-	             <%= avatar_for(@post.user, size:40) %>
-
+	            
+	
+            <%= avatar_for(comment.user, size: 40)%>
+            <%= link_to comment.name, comment.user %><br/>
+          
+	      
 	  		     <small style="float: right;"> publicado <%= @post.created_at.strftime("%Y-%m-%d")  %></small>
-                
+             
 	            <div class="comments-box">
 	                 
 
@@ -45,7 +52,8 @@
 	        </div>
 
 	      </div>    
-		      <% if user_signed_in? %>
+		      
+		    <% if user_signed_in? && current_user?(comment.user) %>
 		      <%= link_to 'Elimimnar comment', [comment.post, comment],
 		      method: :delete,
 		      data: { confirm: 'Are you sure?' } %>

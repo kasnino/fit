@@ -60,7 +60,7 @@ end
 
 private
   def post_params
-    params.require(:post).permit(:title, :text, :imagen, :all_tags, :categories)
+    params.require(:post).permit(:title, :text, :imagen, :all_tags, :category_ids)
   end
 
 def category_params

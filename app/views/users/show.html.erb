@@ -1,50 +1,66 @@
 
 <div class="banner-container" data-animation="fadeInUp-fadeOutDown-slow">
   <div class="hero-wrapper">
-    <header class="hero">
+   
       <div class="profile-info">
         <h1 class="hero-title"><%= @user.name %></h1>
-        <p class="hero-description"><%= @user.description %></p>
-        
-      </div>
 
-      <div class="hero-avatar">
+           <div class="avatar-imagen2">
         <%= avatar_for @user, size: 100 %>
+        </div>  
+        
+        <p class="hero-description"><%= @user.description %></p>
       </div>
-    </header>
-</div>
-</div>
 
+  
+        
+    
 
+    <div class="stats">
+        <button class="button"><a href="<%= following_user_path(@user)%>">
+            <strong id="following" class="stats">
+             <%= @user.followings.count%>
+           </strong> Siguiendo 
+        </a></button> 
 
+    
 
-<% if user_signed_in? && current_user?(@user) %>
-<%= link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-left edit-button' %>
-<% end %>
-
-<% if user_signed_in? && !current_user?(@user) %>
-
- <% if current_user.following?(@user) %>
-    <%= link_to "Dejar Seguir", relationships_path(user_id: @user.id), method: :delete, class: 'button green-border-button pull-left edit-button' %>
-
-<% else %>
-
- <%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
-
-<% end %>
-   <br> <br> 
+        <button class="button">
+          <a href="<%= followers_user_path(@user)%>">
+           <strong id="followers" class="stats">
+             <%= @user.followers.count%>
+             <% if @user.followers.count < 10 %>
+                </strong> Seguidor 
+               <% else %>
+                 Seguidores
+             <% end %>
+         </a>
+       </button> 
    
-<div class="stats">
 
-    <a href="<%= following_user_path(@user)%>">
-    <strong id="following" class="stats">
-    <%= @user.followings.count%>
-    </strong> Siguiendo </a> 
 
-    <a href="<%= followers_user_path(@user)%>">
-    <strong id="followers" class="stats">
-    <%= @user.followers.count%>
-    </strong> Seguidores</a> 
 
-<% end %>
 
+ </div>
+
+        <% if user_signed_in? && !current_user?(@user) %>
+
+         <% if current_user.following?(@user) %>
+            <%= link_to "Dejar Seguir", relationship_path(user_id: @user.id), method: :delete, class: 'button green-border-button pull-left edit-button' %>
+
+        <% else %>
+
+         <%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
+
+        <% end %>
+           
+           
+
+        <% end %> </div>
+        <br><br>   
+
+        <% if user_signed_in? && current_user?(@user) %>
+        <%= link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-left edit-button' %>
+        <% end %>
+ 
+</div>

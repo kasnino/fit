@@ -12,16 +12,17 @@
         <div class="comment-avatar">
           
         
-             
-       <%= avatar_for(@post.user, size:40) %>
+       <% if user_signed_in? %>       
+       <%= link_to(avatar_for(current_user, size: 35), current_user)%>
+        <%= link_to(current_user.name, current_user)%>
        
-       
-          
+  
+         <% end %> 
         </div>
  
             <div class="comments-box">
                 <label id="placeholder" aria-hidden="true" slot="label" class="style-scope ytd-commentbox">
-                 grega un comentario público…
+                 <a>Agrega un comentario público…</a>
                 </label>
                     
                   

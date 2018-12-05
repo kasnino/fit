@@ -34,19 +34,20 @@
     <%=f.error_span(:text) %>
   </div>
  <br>
-   <div class="form-inputs">
+<!--    <div class="form-inputs">
     <%= f.label :all_tags, 'Categorias'%>
     <div class="col-lg-10"><br>
       <%= f.text_field :all_tags, :class => 'form-control', :placeholder => 'Categorias Separadas en comas (,)'  %>
     </div>
     <%=f.error_span(:title) %>
-  </div>
+  </div> -->
 <br>
-  <div class="post_panel level-2">
-    <label>Categorias</label>
+  <div>
+    <h3>Categorias</h3>
     <% @categories.each do |category|%>
      <div class="field">
-      <%= check_box_tag "category_ids[]", category.id %> <%= category.name%>
+      <%= check_box_tag "categories_ids[]", category.id %> 
+      <%= category.name%>
      </div>
 
      <%end%>
@@ -59,6 +60,7 @@
               <%= f.file_field :imagen %>
               <%= icon('camera') %>
             </label>
+            
           </div>
 
 
@@ -70,6 +72,8 @@
     <%=f.error_span(:user_id) %>
   </div>
  -->
+
+
   <div class="form-actions">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>

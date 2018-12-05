@@ -2,9 +2,7 @@ class Post < ApplicationRecord
 	#pertenece a
 	belongs_to :user
 	 #tiene mucho de
-     after_create :save_categories
-  
-	 has_many :comments, dependent: :destroy
+	 has_many :comments, -> { order(created_at: :desc) }, dependent: :destroy
 	 validates :title, presence: true,
 	 length: { minimum: 5 }
 
@@ -17,7 +15,9 @@ class Post < ApplicationRecord
 
 	 has_many :has_categories
 	 has_many :categories, through: :has_categories
+     delegate :name, to: :user
 
+     after_create :save_categories
 
 
 	 def categories=(value) 
@@ -48,10 +48,9 @@ class Post < ApplicationRecord
 
 	 private
 	    def save_categories
-	    	   @categories.each do |category_id|
-	    	 	 HasCategory.create(category_id: category_id, post_id: self.id)
-	        end
+	    @categories.each do |category_id|
+ 	 	  HasCategory.create(category_id: category_id, post_id: self.id)
+	         end
 	    end 	
-
 
 	end

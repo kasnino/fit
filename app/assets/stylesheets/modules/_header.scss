@@ -52,3 +52,15 @@ margin-right: 8px;
   background-image: none;
 }
 
+.berengena{
+
+	animation: berengena-spin infinite 20s linear;
+   margin-left: 15px;
+}
+
+
+@keyframes berengena-spin{
+  from{ transform: rotate(0deg); }
+  to{transform: rotate(360deg); }
+
+}

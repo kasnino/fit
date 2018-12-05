@@ -42,22 +42,28 @@ body{
 
 .comment-main-level{
 
-	background-color: aliceblue;
-	border-radius: 15px;
-	background: #FCFCFC;
-	padding: 10px 12px;
-	border-bottom: 3px solid #E5E5E5;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.70);
+  padding: 20px;
+  font-weight: 900;
+  font-family: arial;
+  position: relative;
 
-	  position: relative;
+}
 
-  height: auto;
 
- 
-  background-color: #f5f5f5;
-  border-radius: 10px;
- 
+.comment-main-level:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid rgba(0, 0, 0, 0.60);
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(0, 0, 0, 0.60);
+  right: -16px;
+  top: 0px;
+}
 
-	}
 .comment-main-level:after {
 	content: '';
 	width: 0;
@@ -91,7 +97,7 @@ body{
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 
-  color: text-color;
+  color: #fff;
   
 }
 .comments-head{

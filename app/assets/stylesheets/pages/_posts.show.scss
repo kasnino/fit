@@ -4,7 +4,7 @@
  line-height: 22px;
  color: #666;
 
- color: #313449;
+ color: #c5c5c5;
  border: 1px solid #efefef;
  padding: 0px 60px;
  margin-bottom: 1.6em;
@@ -12,7 +12,9 @@
  box-sizing: border-box;
  margin-right: auto;
  margin-left: auto;
-
+ border-radius: 25px;
+    box-shadow: 5px 5px 3px #fff;
+margin-top: 40px;
 }
 .p{
   margin: 0 0 10px;
@@ -40,10 +42,11 @@
   font-size: 28px;
   justify-content: center;
   padding: 1.5em;
-  margin-bottom: 1.6em;
+ 
   display: flex;
   justify-content: center;
   align-items: center;    
+  color: black;
 
 }
 .perfil-avatar{
