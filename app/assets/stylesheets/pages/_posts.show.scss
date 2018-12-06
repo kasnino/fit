@@ -13,7 +13,7 @@
  margin-right: auto;
  margin-left: auto;
  border-radius: 25px;
-    box-shadow: 5px 5px 3px #fff;
+
 margin-top: 40px;
 }
 .p{
@@ -35,7 +35,7 @@ margin-top: 40px;
   max-width: 100%;
   height: auto;
   box-sizing: border-box;
-    width: 50em;
+    width: 60em;
     } 
 
 .hero-title {
@@ -46,9 +46,36 @@ margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;    
-  color: black;
+  color: #FFFFFF;
 
 }
 .perfil-avatar{
     padding: 10%;
+}
+
+
+@media screen and (max-width: 568px) {
+    /* Basic */
+      body {
+        min-width: 320px;
+      }
+ .hero-avatar {
+    max-width: 300px;
+    padding: 0; 
+   }
+
+
+    .post-show{
+           line-height: 22px;
+    color: #666;
+    padding: 10px;
+    color: #c5c5c5;
+    width: 95%;
+    }
+
+.comment-main-level {
+  max-width: 250px;
+}
+
+
 }

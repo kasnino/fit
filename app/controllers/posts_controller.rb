@@ -4,13 +4,13 @@ class PostsController < ApplicationController
 
 def new
 	@post = current_user.posts.build
-  @categories = Category.all
+  @categories = Category.all.map { |c| [c.name, c.id]  }
 end
 
 def create
 
   @post = current_user.posts.build(post_params)
-  @post.categories = category_params
+  @post.category_id = params[:category_id]
   
   # @post.categories = post_params[:categories]
     if @post.save
@@ -38,6 +38,7 @@ end
 
 def edit
   @post = Post.find(params[:id])
+  @categories = Category.all.map { |c| [c.name, c.id]  }
 end
 
 def update
@@ -64,7 +65,7 @@ private
   end
 
 def category_params
-    params.permit(:category_ids)
+    params.permit(:category_id)
 
 end
 

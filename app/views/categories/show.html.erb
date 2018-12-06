@@ -5,13 +5,58 @@
   <%= @category.name %>
 <br>
 	
+     
+	
     
 <br>
   <strong>Color:</strong>
   <%= @category.color %>
 
 
+<% Post.where(category_id: @category.id).each do |post|%>
+<div id="pins" class="transitions-enabled clearfix masonry ">
 
+<div class="main-container level-1">
+
+<div class="pin post_panel level-2", style="text-transform: capitalize;" >
+
+   <%= avatar_for(post.user, size:40) %> 
+
+    <%= link_to post.user.name, post.user %>
+   <br>
+      <div class="post_panel_imagen level-3 img-fluid">
+        <br>
+        <%= imagen_for(post, size:1200) %>
+       </div>
+       <br>
+          <div class="main-body level-4">
+            <h3 class="post-title">
+            <%= link_to post.title, post %>   </h3> 
+           <span class="text-nuted pull-right">
+
+           <!--  -->
+              
+            </span><br>
+         
+            </div>
+            <span class="text-nuted pull-right">
+              <small >
+            <!--    aqui <%= link_to post.categories%> -->
+                      <i class="far fa-heart" style="color:#BE81F7;"></i>
+                      <i class="far fa-comment" style="color:#BE81F7;"> 
+                      <%= post.comments.count %>
+                    
+                      </i>
+                      <i class="far fa-eye" style="color:#BE81F7;"></i>
+              </small>
+            </span> 
+
+   
+</div>      
+
+</div> </div> 
+
+<%end%>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

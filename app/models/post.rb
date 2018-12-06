@@ -7,7 +7,7 @@ class Post < ApplicationRecord
 	 length: { minimum: 5 }
 
 	 default_scope { order('created_at DESC') }
-
+	 belongs_to :category
 	 mount_uploader :imagen, ImagenUploader
 
 	 has_many :taggings, dependent: :destroy
@@ -17,7 +17,7 @@ class Post < ApplicationRecord
 	 has_many :categories, through: :has_categories
      delegate :name, to: :user
 
-     after_create :save_categories
+
 
 
 	 def categories=(value) 
@@ -46,11 +46,11 @@ class Post < ApplicationRecord
 
 
 
-	 private
-	    def save_categories
-	    @categories.each do |category_id|
- 	 	  HasCategory.create(category_id: category_id, post_id: self.id)
-	         end
-	    end 	
+	 # private
+	 #    def save_categories
+	 #    @categories.each do |category_id|
+ 	#  	  HasCategory.create(category_id: category_id, post_id: self.id)
+	 #         end
+	 #    end 	
 
 	end

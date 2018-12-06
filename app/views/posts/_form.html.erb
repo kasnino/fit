@@ -44,13 +44,13 @@
 <br>
   <div>
     <h3>Categorias</h3>
-    <% @categories.each do |category|%>
+  
      <div class="field">
-      <%= check_box_tag "categories_ids[]", category.id %> 
-      <%= category.name%>
+   
+     <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Sleccione Uno!")%>
      </div>
 
-     <%end%>
+  
   </div>
 
 
