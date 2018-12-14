@@ -1,44 +1,45 @@
 
-  <!-- AQUIIII EL LANDING PAGE
--->
+    <!-- AQUIIII EL LANDING PAGE
+  -->
 
+ <div  class="pin post_panel level-2", style="text-transform: capitalize;" >
+   <div class="colorr">
+   <%= link_to avatar_for(post.user, size:38), post.user %> 
+    <a><%= link_to post.user.name, post.user %></a>
+     
+   </div>
 
-<div class="pin post_panel level-2", style="text-transform: capitalize;" >
-   <%= avatar_for(post.user, size:40) %> 
-
-    <%= link_to post.user.name, post.user %>
    <br>
-      <div class="post_panel_imagen level-3 img-fluid">
-        <br>
-        <%= imagen_for(post, size:1200) %>
-       </div>
-       <br>
-          <div class="main-body level-4">
-            <h3 class="post-title">
-            <%= link_to post.title, post %>   </h3> 
-           <span class="text-nuted pull-right">
-
-           <!--  -->
-              
-            </span><br>
-         
+           <div class="post_panel_imagen level-3 img-fluid" style="height: 150px;">
+            <br>
+            <%= imagen_for(post, size:1200) %>
+          </div>
+  <br>
+            <div class="main-body level-4">
+              <center>
+                  <h3 class="post-title">
+                     <%= link_to post.title, post %>   
+                  </h3>
+              </center> 
             </div>
-            <span class="text-nuted pull-right">
-              <small >
-            <!--    aqui <%= link_to post.categories%> -->
-                      <i class="far fa-heart" style="color:#BE81F7;"></i>
-                      <i class="far fa-comment" style="color:#BE81F7;"> 
-                      <%= post.comments.count %>
-                    
-                      </i>
-                      <i class="far fa-eye" style="color:#BE81F7;"></i>
-              </small>
-            </span> 
-          
-
-          
-
    
-</div>      
+           <div class="icono">
+             <span class="text-nuted pull-right">
+              <i class="far fa-heart" style="color:#BE81F7;"></i>
+              <i class="far fa-comments" style="color:#BE81F7;"></i>
+              <%= post.comments.count %>
+              <i class="far fa-eye" style="color:#BE81F7;"></i>
+            </span>
+          </div>
+
+          
+           <div class="color", 
+           style="background-color: <%= post.category.color %>"> 
+           <%= link_to post.category.name, category_path(post.category) %>
+         </div>
+     
+  
+
+  </div>      
 
 

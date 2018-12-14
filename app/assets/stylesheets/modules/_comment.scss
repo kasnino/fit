@@ -43,7 +43,17 @@ body{
 .comment-main-level{
 
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.70);
+  background-color: rgba(0, 0, 0, 0.80);
+  padding: 20px;
+  font-weight: 900;
+  font-family: arial;
+  position: relative;
+
+}
+.comment-main-level1{
+
+border-radius: 15px;
+      background: linear-gradient(to right, #03001e, #9c27b0, #9c27b0, #03001e);
   padding: 20px;
   font-weight: 900;
   font-family: arial;
@@ -51,15 +61,14 @@ body{
 
 }
 
-
 .comment-main-level:before {
   content: "";
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 15px solid rgba(0, 0, 0, 0.60);
+  border-left: 15px solid rgba(0, 0, 0, 0.69);
   border-right: 15px solid transparent;
-  border-top: 15px solid rgba(0, 0, 0, 0.60);
+  border-top: 15px solid rgba(0, 0, 0, 0.69);
   right: -16px;
   top: 0px;
 }

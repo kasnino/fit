@@ -25,18 +25,31 @@ class User < ApplicationRecord
 
 
 
-  def follow(other_user)
-  	active_relationships.create(followed_id: other_user.id)
-  end 
+  # def follow(other_user)
+  # 	active_relationships.create(followed_id: other_user.id)
+  # end 
 
-  def unfollow(other_user )
-  	active_relationships.find_by(followed_id: other_user.id).destroy
-  end                       
+  # def following?(other_user)
+  #   followings.include?(other_user.id)
+  #   active_relationships.find_by(followed_id: other_user.id)
+  # end
+  # def unfollow(other_user )
+  # 	active_relationships.find_by(followed_id: other_user.id).destroy
+  # end                       
 
-  def following?(other_user)
-  	#followings_ids.include?(other_user.id)
-  	active_relationships.find_by(followed_id: other_user.id)
-  end
+def following?(followed)
+relationships.find_by_followed_id(followed)
+end
+
+def follow!(followed)
+relationships.create!(:followed_id => followed.id)
+end
+
+def unfollow!(followed)
+relationships.find_by_followed_id(followed).destroy
+end
+
 
   mount_uploader :avatar, AvatarUploader
 end
+

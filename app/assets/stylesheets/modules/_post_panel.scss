@@ -1,40 +1,40 @@
  * {
   margin: 0;
-   padding: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
- }
+}
 
 .contenido{
   background: #222222ab;
   color: #9c27b0;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    margin: 0;
-    padding: 4px 8px;
-    min-height: 54px;
-    outline: none;
-     width: 100%;
-    height: 500px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  margin: 0;
+  padding: 4px 8px;
+  min-height: 54px;
+  outline: none;
+  width: 100%;
+  height: 500px;
 }
 .centrar{
   padding: 25px;
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 trix-editor {
-    color: #FFF;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    margin: 0;
-    padding: 4px 8px;
-    min-height: 54px;
-    outline: none;
-    width: 100%;
-    height: 400px;
-    overflow-y: scroll;
+  color: #FFF;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  margin: 0;
+  padding: 4px 8px;
+  min-height: 54px;
+  outline: none;
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
 }
 .main-container{
   display: grid;
@@ -49,25 +49,25 @@ trix-editor {
 .main-container-boton{
 
  background: #FFF;
-  padding: 5px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  clear: both;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  }
+ padding: 5px;
+ margin-bottom: 20px;
+ border-radius: 5px;
+ clear: both;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+}
 
 
 .post_panel {
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.22);
-	
-	border-radius: 15px;
 
-	margin-bottom: 1.6em;
-	max-width: 200px;
-	background: #0a0a0a;
-	justify-content: center;
+  border-radius: 15px;
+
+  margin-bottom: 1.6em;
+  max-width: 200px;
+  background: linear-gradient(to right, #03001e, #25053c, #25053c, #03001e);
+  justify-content: center;
   padding: 0 15px;
 
   box-shadow: 0 0 0 4px rgba(255,255,255,0.1);
@@ -77,29 +77,26 @@ trix-editor {
   transform: scale(1.9);
   transform: rotate(0deg);
 
-
-
-
-
-
 }
+
+
 
 
 .post_panel2{
  /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.22); */
-    /* border: 1px solid #efefef; */
-    border-radius: 15px;
-    /* margin-bottom: 1.6em; */
-    /* max-width: 200px; */
-    background: #0a0a0a;
-    justify-content: center;
-    padding: 15px 15px;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
-    -webkit-transform: scale(1.9);
-    -moz-transform: scale(1.9);
-    -ms-transform: scale(1.9);
-    transform: scale(1.9);
-    transform: rotate(0deg);
+ /* border: 1px solid #efefef; */
+ border-radius: 15px;
+ /* margin-bottom: 1.6em; */
+ /* max-width: 200px; */
+ background: #0a0a0a;
+ justify-content: center;
+ padding: 15px 15px;
+ box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+ -webkit-transform: scale(1.9);
+ -moz-transform: scale(1.9);
+ -ms-transform: scale(1.9);
+ transform: scale(1.9);
+ transform: rotate(0deg);
 }
 
 
@@ -118,7 +115,7 @@ trix-editor {
   -moz-transform: scale(0.93);
   -ms-transform: scale(0.93);
   transform: scale(0.9);
- } 
+} 
 .post-title{
 
   color: #bd1e23 !important;
@@ -128,28 +125,20 @@ trix-editor {
 .post_panel_imagen {
 
 	display: grid;
-   background-size: cover;
-  background-position: center;
+ background-size: cover;
+ background-position: center;
 }
 .uk-grid-divider:empty {
-      margin-top: 25px;
-    margin-bottom: 25px;
-    border-top: 1px solid #ddd;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-top: 1px solid #ddd;
 }
 
-
-.carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
 
 #pins{
 
   margin: 0 auto;
-
+zoom: 1.2;
 
 }
 
@@ -160,24 +149,35 @@ trix-editor {
 
 }
 
- .pin{
-     margin: 10px;
-     width: 350px;
-     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.22);
-    
-     text-align: center;
-  }
+.pin{
+ margin: 10px;
+ width: 350px;
+ text-align: center;
+ line-height: 30px;
+}
 .post-title{
 
-  font-size: 20px;
-  font-weight: 100;
-  margin: 0;
+    line-height: 1.5;
+    text-decoration: none;
+    margin-top: 5px;
+    height: 75px;
 
+cursor: pointer;
+  margin: 0;
+  font-size: 11px;
+  width: 105px;
   a {
-    color: #474747;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
+.post-title:hover{
+transform: scale(1.3);
 
+
+
+}
 .user{
 
   font-size: 12px;
@@ -186,33 +186,33 @@ trix-editor {
 
 .container-new{
  margin: 10px;
-    justify-content: center;
-    max-width: 100%;
-    border-radius: 15px;
-    border: 3px solid #efefef;
-    padding: 20px;
+ justify-content: center;
+ max-width: 100%;
+ border-radius: 15px;
+ border: 3px solid #efefef;
+ padding: 20px;
 
 }
 .tabla{
 
   background: #363636;
-    border-radius: 20px;
-    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-        overflow:hidden;
-        height:1%;
+  border-radius: 20px;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  overflow:hidden;
+  height:1%;
 }
 
 .tabla li{
-background: #FFF;
-padding: 20px;
+  background: #FFF;
+  padding: 20px;
 
 }
 
 .tabla td,tr{
 
 
-border: 1px solid black;
+  border: 1px solid black;
 
 }
 .form-group{
@@ -222,20 +222,20 @@ border: 1px solid black;
 
 .uk-h2.uk-margin-top-remove {  
 
-    background: #101010;
-    text-align: center;
-    color: #f1f2f9 !important;
-    font-size: 12px;
-    font-weight: 700;
-    font-family: open sans condensed,sans-serif;
-    text-transform: uppercase;
-    line-height: 48px;
-    margin-bottom: 0;
-  }
-  .titulo{
-    width: 100%;
-    height: 35px;
-  }
+      background: linear-gradient(to right, #03001e, #9d24f5, #3f0f63, #03001e);
+  text-align: center;
+  color: #f1f2f9 !important;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: open sans condensed,sans-serif;
+  text-transform: uppercase;
+  line-height: 48px;
+  margin-bottom: 0;
+}
+.titulo{
+  width: 100%;
+  height: 35px;
+}
 input.body {
   width:95%;
   height: 35px;
@@ -244,10 +244,10 @@ input.body {
 @media screen and (max-width: 736px) {
 
 
-      body {
-        min-width: 320px;
-      }
-      .container-new{
+  body {
+    min-width: 320px;
+  }
+  .container-new{
     margin: 1px;
     justify-content: center;
     max-width: 100%;
@@ -255,16 +255,16 @@ input.body {
     border: 3px solid #efefef;
     padding: 2px;
 
-}
-
   }
 
-  @media screen and (max-width: 568px) {
+}
 
-    body {
-        min-width: 220px;
-      }
-      .container-new{
+@media screen and (max-width: 568px) {
+
+  body {
+    min-width: 220px;
+  }
+  .container-new{
     margin: 1px;
     justify-content: center;
     max-width: 100%;
@@ -272,17 +272,17 @@ input.body {
     border: 3px solid #efefef;
     padding: 2px;
 
-}
   }
+}
 
 
 @media screen and (max-width: 768px) {
-  
-  body {
-        min-width: 1024px;
-      }
 
-      .container-new{
+  body {
+    min-width: 1024px;
+  }
+
+  .container-new{
     margin: 10px;
     justify-content: center;
     text-align: center;
@@ -291,18 +291,18 @@ input.body {
     border: 3px solid #efefef;
     padding: 10px;
 
-}
+  }
 }
 
 
 @media screen and (max-width: 568px) {
-  
+
   body {
-        min-width: 324px;
-      }
+    min-width: 324px;
+  }
 
 
-.container-new{
+  .container-new{
     margin: 1px;
     justify-content: center;
     max-width: 100%;
@@ -310,7 +310,7 @@ input.body {
     border: 3px solid #efefef;
     padding: 2px;
 
-}
+  }
 }
 
 .publi-paga1
@@ -318,14 +318,14 @@ input.body {
 
   width: 200px;
   height: 300px;
-  background: #7303c0 url("../images/default-avatar.png") bottom left;
+  background: #7303c0;
 }
 
 .publi-paga2{
 
   width: 200px;
   height: 300px;
-  background: #7303c0 url("/assets/images/pexels-photo-129208.jpeg") bottom left;
+  background: #7303c0;
 }
 
 .item-active
@@ -333,6 +333,16 @@ input.body {
 
   width: 1200px;
   height: 300px;
-  background: #0a0a0a url("/assets/images/pexels-photo-129208.jpeg") bottom left;
+  background: #0a0a0a;
 
+}
+.colorr{
+  display: inline;
+  font-size: 10px;
+}
+
+.colorr > a:hover{
+  color: #db1ffb;
+  transform: scale(1.1);
+  font-size: 17px;
 }

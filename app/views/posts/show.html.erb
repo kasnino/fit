@@ -4,88 +4,92 @@
   <!--   <div class="pull-right">
       <%= render partial: 'posts/social_share', locals: { post: @post } %>
     </div> -->
-    
- <h1 class="hero-title"><%= @post.title %></h1>
-    <dl class="dl-horizontal">
+    <div style="text-transform: capitalize;"> 
+     <h1 class="hero-title"><%= @post.title %></h1>
+     <dl class="dl-horizontal">
 
       <div class="hero-wrapper">
         <header class="hero">
-         
+
           <div class="hero-avatar">
             <%= imagen_for @post, size: 1200 %>
           </div>
         </header>
       </div>
-
-     
-
-
-
-      <%- model_class = Post -%>
+    </div>  
+    
 
 
-      <div class="post-show">
+
+    <%- model_class = Post -%>
+
+
+    <div class="post-show"">
       <td>publicado el <%=  @post.created_at.strftime("%Y-%m-%d") %></td>
+      <br>
+
+      <div class="perfil-avatar">
+       <%= avatar_for(@post.user, size:40) %>   
+       <%= link_to @post.user.name, @post.user %>
+       <br>
+       <div class="heart" style="float: right;">
+        <i class="far fa-heart " style="color:#BE81F7;"></i>
+        <i class="far fa-comment" style="color:#BE81F7;">  </i>
+        <%= @post.comments.count %>
+        
+        <i class="far fa-eye" style="color:#BE81F7;"></i>
+      </div> 
+
+    </div><hr class="uk-grid-divider">
+    <p><%=raw @post.text %></p>
+  </div>
+  
+</dl>
+
+<br>
 <br>
 
-<div class="perfil-avatar">
-   <%= avatar_for(@post.user, size:40) %>   
-   <%= link_to @post.user.name, @post.user %>
-   <br>
-      <div class="heart" style="float: right;">
-            <i class="far fa-heart " style="color:#BE81F7;"></i>
-            <i class="far fa-comment" style="color:#BE81F7;"> 
-                      <%= @post.comments.count %>
-                      </i>
-       </div> 
 
-</div><hr class="uk-grid-divider">
-        <p><%=raw @post.text %></p>
-      </div>
-              
-    
+<small >
 
-<!-- <div class="field">
-      <% @categories.each do |category|%>
-      <%=link_to category.name, category %>
-      <%end%>
-</div> -->
-    </dl>
+ <div class="color", 
+ style="background-color: <%= @post.category.color %>"> 
+ <%= link_to @post.category.name, category_path(@post.category) %>
 
-    <br>
-    <br>
-<hr class="uk-grid-divider">
-<h3 class="uk-h2 uk-margin-top-remove"></h3>
+</div>
+</small>
+
 
 <div class="centrar">
-      <h3><%= @post.comments.count %> Comentarios</h3>
-    </div>
-
-    
-    <%= render @post.comments %>
-   <br>
-<hr class="uk-grid-divider">
-<h3 class="uk-h2 uk-margin-top-remove">
-  </h3>
-<div class="page-header">
-  <a><h1 class="text-indigo">Comentarios</h1>
-</a></div>
-   
-    <%= render "comments/form"%>
-
- <% if user_signed_in? && current_user?(@post.user) %>
-
- <div class="centrar">
-    <%= link_to t('.back', :default => t("helpers.links.back")),
-    posts_path, :class => 'btn btn-default'  %>
-
-    <%= link_to t('.edit', :default => t("helpers.links.edit")),
-    edit_post_path(@post), :class => 'btn btn-default' %>
-
-    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-    post_path(@post),
-    :method => 'delete',
-    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-    :class => 'btn btn-danger' %>
+  <h3><%= @post.comments.count %> Comentarios</h3>
 </div>
-    <% end %>
+
+
+<%= render @post.comments %>
+
+
+
+
+  <h3 class="uk-h2 uk-margin-top-remove">Comentarios</h3>
+
+
+
+
+<%= render "comments/form"%>
+
+      <% if user_signed_in? && current_user?(@post.user) %>
+
+      <div class="centrar">
+        <%= link_to t('.back', :default => t("helpers.links.back")),
+        posts_path, :class => 'btn btn-default'  %>
+
+        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+        edit_post_path(@post), :class => 'btn btn-default' %>
+
+        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+        post_path(@post),
+        :method => 'delete',
+        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+        :class => 'btn btn-danger' %>
+      </div>
+      <% end %>

@@ -19,6 +19,14 @@ end
     end
   end
 
+
+def followers
+ redirect_to followers_user_path
+end 
+
+def following
+ redirect_to following_user_path
+end 
 private 
  def check_authorization
       unless current_user.id == params[:id].to_i

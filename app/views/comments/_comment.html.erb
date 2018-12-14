@@ -1,68 +1,69 @@
 
- 
+
 
 
 <%= form_for @post, :html => { :class => "form-horizontal post" } do |f| %>
-<body class="body-comment">
+<body class="body-comment" >
 
 	<div class="comments-container">
 
-	   <ul id="comments-list" class="comments-list">
-	     <li>
-	      
-	      <div class="comment-main-level">
+		<ul id="comments-list" class="comments-list">
+			<li>
 
-	        <div class="comment-avatar">
-	          
+				<div class="comment-main-level">
 
+					<div class="comment-avatar">
 
 
-	        <br>
-	            
-	
-            <%= avatar_for(comment.user, size: 40)%>
-            <%= link_to comment.name, comment.user %><br/>
-          
-	      
-	  		     <small style="float: right;"> publicado <%= @post.created_at.strftime("%Y-%m-%d")  %></small>
-             
-	            <div class="comments-box">
-	                 
-
-	                  <div class="comments-content">
-
-				              <div class="text_area">
-<% @comments.each do |comment|%>
 
 
- <% end %>
-				            <%= comment.commenter %>
-<%= comment.body %>  
+						<br>
 
-				              </div>
-				     <div class="iconos" style="float: right;">  
-		              	<i class="far fa-heart" style="color:#BE81F7;"></i>
-				        <i class="fas fa-reply" style="color:#BE81F7;"></i>
-				        <i class="far fa-eye" style="color:#BE81F7;"></i>
-                     </div>
-	                  </div>
-	            
-	              </div>
 
-	        </div>
+						<%= avatar_for(comment.user, size: 40)%>
+						<%= link_to comment.name, comment.user %><br/>
 
-	      </div>    
-		      
-		    <% if user_signed_in? && current_user?(comment.user) %>
-		      <%= link_to 'Elimimnar comment', [comment.post, comment],
-		      method: :delete,
-		      data: { confirm: 'Are you sure?' } %>
-		      <% end %>
-	   </li>
 
-	  </ul>    
-	 </div>
+						<small style="float: right;"> publicado <%= @post.created_at.strftime("%Y-%m-%d")  %></small>
 
- </body>
+						<div class="comments-box">
 
- <% end %>
+
+							<div class="comments-content">
+
+							<div class="text_area" style="text-transform: capitalize;">
+									<% @comments.each do |comment|%>
+
+
+									<% end %>
+									<%= comment.commenter %>
+									<%= comment.body %>  
+
+								</div>
+								<div class="iconos" style="float: right;">  
+									<i class="far fa-heart" style="color:#BE81F7;"></i>
+									<i class="fas fa-reply" style="color:#BE81F7;"></i>
+									<i class="far fa-eye" style="color:#BE81F7;"></i>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>    
+
+				<% if user_signed_in? && current_user?(comment.user) %>
+				<%= link_to 'Eliminar Comentario!', [comment.post, comment],
+				class: 'button green-button pull-left edit-button',
+					method: :delete,
+					data: { confirm: 'Are you sure?' } %>
+					<% end %>
+				</li>
+
+			</ul>    
+		</div>
+
+	</body>
+
+	<% end %>

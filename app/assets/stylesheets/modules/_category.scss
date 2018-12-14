@@ -1,21 +1,21 @@
 * {
- 	margin: 0;
- 	padding: 0;
- 	-webkit-box-sizing: border-box;
- 	-moz-box-sizing: border-box;
- 	box-sizing: border-box;
- }
- .main-container-padre{
-float:none;
-    text-align:center;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-container-padre{
+  float:none;
+  text-align:center;
   display: grid;
   grid-template-columns: repeat(auto-fill, auto);
   grid-gap: 20px;
-   height: 50px;
-    padding: 20px;
+  height: 50px;
+  padding: 20px;
   
 
- }
+}
 
 
 .box {
@@ -24,7 +24,7 @@ float:none;
 }
 
 
- .clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
@@ -32,28 +32,28 @@ float:none;
 .col3 { width: 20px; }
 
 .btn1 {
-     
-    float:none;
-    text-align:center;
-    font-size: 14px;
-    line-height: 16px;
-    text-transform: lowercase;
-    color: #ccc;
-    background-color: #fff;
-    border: 1px solid #6f5499;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    padding: 10px;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
+
+  float:none;
+  text-align:center;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: lowercase;
+  color: #ccc;
+  background-color: #fff;
+  border: 1px solid #6f5499;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
 .btn1 {
 
-background-color:#9c27b0;
-border: 3px solid transparent;
-transition-property: background-color, border;
-transition-duration: 0.4s;
- 
+  background-color:#9c27b0;
+  border: 3px solid transparent;
+  transition-property: background-color, border;
+  transition-duration: 0.4s;
+
 }
 
 
@@ -67,4 +67,20 @@ transition-duration: 0.4s;
 
 a:hover{
   color: #fff;  
+}
+
+.color{
+
+  border-radius: 15px;
+  width: 7em;
+  margin: 5px;
+  text-align: center;
+  color: #FFF;
+  font-size: 10px;
+  line-height: 11px;
+}
+
+.color:hover{
+
+  transform: scale(1.3);
 }

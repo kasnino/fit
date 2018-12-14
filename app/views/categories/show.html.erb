@@ -1,16 +1,15 @@
 
 
 
-  <strong>Categoria:</strong>
-  <%= @category.name %>
+  <strong>Categoria:
+   <div class="color", style="background-color: <%= @category.color %>"> 
+   <%= @category.name %>
+      </strong> 
+   </div>
+
 <br>
 	
-     
-	
-    
-<br>
-  <strong>Color:</strong>
-  <%= @category.color %>
+
 
 
 <% Post.where(category_id: @category.id).each do |post|%>
@@ -49,6 +48,16 @@
                       </i>
                       <i class="far fa-eye" style="color:#BE81F7;"></i>
               </small>
+
+
+                 <small >
+
+                       <div class="color", 
+                       style="background-color: <%= post.category.color %>"> 
+                <%= link_to post.category.name, category_path(post.category) %>
+
+                     </div>
+                   </small>
             </span> 
 
    
@@ -58,5 +67,9 @@
 
 <%end%>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Edit', edit_category_path(@category),
+class: 'button green-button pull-left edit-button' %> 
+
+<%= link_to 'Back', categories_path,
+class: 'button green-button pull-left edit-button' %>
+[white-space: pre-wrap]

@@ -6,9 +6,13 @@
  	box-sizing: border-box;
  }
 .button {
-  border: 1px solid;
+  
   padding: 0.5em 1.5em !important;
   border-radius: 20px;
-  border: 1px solid #6f5499;
+  border: 2px solid #6f5499;
   background-color: #0a0a0a;
   }
+.button:hover{
+ border: 2px solid #db1ffb;
+ color: #FFF;
+}

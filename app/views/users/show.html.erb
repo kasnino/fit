@@ -17,13 +17,18 @@
     
 
     <div class="stats">
-        <button class="button"><a href="<%= following_user_path(@user)%>">
+        
+
+
+        <button class="button">
+         <a href="<%= following_user_path(@user)%>">
             <strong id="following" class="stats">
              <%= @user.followings.count%>
            </strong> Siguiendo 
         </a></button> 
 
-    
+
+  
 
         <button class="button">
           <a href="<%= followers_user_path(@user)%>">
@@ -36,21 +41,29 @@
              <% end %>
          </a>
        </button> 
-   
-
+    <button class="button"> 
+         <a href=" <%=%> ">
+            <strong id="post" class="stats">
+             <%= @user.posts.count%>
+           </strong> Relatos 
+        </a></button> 
 
 
 
  </div>
 
-        <% if user_signed_in? && !current_user?(@user) %>
+
+
+
+
+  <% if user_signed_in? && !current_user?(@user) %>
 
          <% if current_user.following?(@user) %>
             <%= link_to "Dejar Seguir", relationship_path(user_id: @user.id), method: :delete, class: 'button green-border-button pull-left edit-button' %>
 
-        <% else %>
+            <% else %>
 
-         <%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
+             <%= link_to "Seguir", relationships_path(user_id: @user.id), class: 'button green-border-button pull-left edit-button' %>
 
         <% end %>
            
