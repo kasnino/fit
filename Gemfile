@@ -51,8 +51,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do 
-
-  gem 'rails_12factor'
-end
+ group :production, :staging do
+      gem 'rails_12factor'
+    end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
