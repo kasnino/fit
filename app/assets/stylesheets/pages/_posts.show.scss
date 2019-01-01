@@ -5,8 +5,8 @@
  color: #666;
 
  color: #c5c5c5;
- border: 1px solid #efefef;
- padding: 0px 60px;
+ background: rgba(255,255,255,.1);
+ padding: 60px;
  margin-bottom: 1.6em;
  width: 60%;
  box-sizing: border-box;
@@ -40,14 +40,15 @@ margin-top: 40px;
 
 .hero-title {
   font-size: 28px;
-  justify-content: center;
-  padding: 1.5em;
- 
+
+  font-family: ubuntu;
+  font-weight: 100;
   display: flex;
   justify-content: center;
   align-items: center;    
   color: #FFFFFF;
-
+  text-transform: uppercase;
+  background: rgba(255,255,255,.1);
 }
 .perfil-avatar{
     padding: 10%;
